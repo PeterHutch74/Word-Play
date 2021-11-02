@@ -20,7 +20,7 @@ struct ContentView: View {
                 HStack {
                     CustomTextField(placeholder: "Type of Bird", variable: $words.typeofbird)
                     CustomTextField(placeholder: "Room in House", variable: $words.roominhouse)
-                    CustomTextField(placeholder: "Relatives Name", variable: $words.relativesname)
+                   
                 }
                 HStack {
                     CustomTextField(placeholder: "Verb Past Tense", variable: $words.verbpast)
@@ -37,13 +37,17 @@ struct ContentView: View {
                 }
                 HStack {
                     CustomTextField(placeholder: "Liquid", variable: $words.liquid)
+                    CustomTextField(placeholder: "Relatives Name", variable: $words.relativesname)
+                }
+                HStack {
                     CustomTextField(placeholder: "Name of Body Part Plural", variable: $words.nameofbodypartplural)
+
                 }
                 Spacer()
-                NavigationLink("Next", destination: StoryView(words : Words()))
+                NavigationLink("Next", destination: StoryView(words : words))
             }
+            .navigationTitle("Word Play")
         }
-        navigationTitle("Word Play")
     }
 }
 
